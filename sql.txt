@@ -1,0 +1,18 @@
+--sql join commands
+
+--1.cross join
+select * from customers c,orders s;
+
+--2.natural join
+ select *  from customers NATURAL JOIN orders;
+
+--3.equi join or inner join
+ select * from customers c,orders o where c.customer_id=o.customer_id;
+select * from customers c inner join orders o on c.customer_id=o.customer_id;
+
+--4.left join
+select c.customer_id,o.order_id,c.first_name from customers c left join orders o on c.customer_id=o.customer_id; 
+
+--5.right join
+
+select c.customer_id,o.order_id,c.first_name from customers c right join orders o on c.customer_id=o.customer_id; 
